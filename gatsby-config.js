@@ -7,24 +7,24 @@ module.exports = {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-jodie/gatsby-config.js
-    siteTitle: `Jodie`,
-    siteTitleAlt: `Jodie - Gatsby Starter Portfolio`,
-    siteHeadline: `Jodie - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://jodie.lekoarts.de`,
-    siteDescription: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+    siteTitle: `A Lam`,
+    siteTitleAlt: `A Lam`,
+    siteHeadline: `Personal Website of Anthony Lam`,
+    siteUrl: `https://www.yllam.com`,
+    siteDescription: `Personal website of Anthony Lam`,
     siteLanguage: `en`,
     siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    author: `@yllam`,
   },
   plugins: [
     {
-      resolve: `@lekoarts/gatsby-theme-jodie`,
+      resolve: `@yllam/gatsby-theme-yllam`,
       // See the theme's README for all available options
       options: {
         navigation: [
-          { name: `Projects`, slug: `/projects` },
-          { name: `Art`, slug: `/art` },
-          { name: `About`, slug: `/about` },
+          { name: `projects`, slug: `/projects` },
+          { name: `art`, slug: `/art` },
+          { name: `about`, slug: `/about` },
         ],
       },
     },
@@ -49,9 +49,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `jodie - @lekoarts/gatsby-theme-jodie`,
-        short_name: `jodie`,
-        description: `Image-heavy photography portfolio with colorful accents & customizable pages. Includes adaptive image grids powered by CSS grid and automatic image integration into projects.`,
+        name: `A Lam`,
+        short_name: `yllam`,
+        description: `Personal Website of Anthony Lam`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
@@ -73,6 +73,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-redirect-to',
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
@@ -82,4 +83,4 @@ module.exports = {
       },
     },
   ].filter(Boolean),
-}
+};
