@@ -71,8 +71,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: 'static/logo.svg'
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
-    'gatsby-plugin-redirect-to',
+    "gatsby-plugin-redirect-to",
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
